@@ -187,6 +187,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/jcepedavillamayor/webapp"
+  packages = ["models"]
+  revision = "b45b7f11bd1d475d6d53cb118c401a5af261daa1"
+
+[[projects]]
+  branch = "master"
   name = "github.com/jmoiron/sqlx"
   packages = [
     ".",
@@ -472,6 +478,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a5a2c6efac5c96db5ac720571a350df5153f7acaef503eac1aec9bea21bf79a8"
+  inputs-digest = "682519c189a6b90257d1f6b6ea4e77e90f87beb6c1b5bf10b2996b8db9a7ecee"
   solver-name = "gps-cdcl"
   solver-version = 1

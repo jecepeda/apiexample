@@ -1,0 +1,6 @@
+- id: "framework.created.success"
+  translation: "Framework was successfully created."
+- id: "framework.updated.success"
+  translation: "Framework was successfully updated."
+- id: "framework.destroyed.success"
+  translation: "Framework was successfully destroyed."
