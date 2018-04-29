@@ -187,12 +187,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/jcepedavillamayor/webapp"
-  packages = ["models"]
-  revision = "b45b7f11bd1d475d6d53cb118c401a5af261daa1"
-
-[[projects]]
-  branch = "master"
   name = "github.com/jmoiron/sqlx"
   packages = [
     ".",
@@ -330,10 +324,10 @@
   version = "v1.3.0"
 
 [[projects]]
+  branch = "master"
   name = "github.com/russross/blackfriday"
   packages = ["."]
-  revision = "55d61fa8aa702f59229e6cff85793c22e580eaf5"
-  version = "v1.5.1"
+  revision = "11635eb403ff09dbc3a6b5a007ab5ab09151c229"
 
 [[projects]]
   branch = "master"
@@ -478,6 +472,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "682519c189a6b90257d1f6b6ea4e77e90f87beb6c1b5bf10b2996b8db9a7ecee"
+  inputs-digest = "6889628333c74cc553610583e8f36e9aac843a217e82cf4faf07b2acf97e06da"
   solver-name = "gps-cdcl"
   solver-version = 1
