@@ -11,11 +11,11 @@ import (
 )
 
 type Framework struct {
-	ID          uuid.UUID `json:"id" db:"id"`
-	CreatedAt   time.Time `json:"created_at" db:"created_at"`
-	UpdatedAt   time.Time `json:"updated_at" db:"updated_at"`
-	Title       string    `json:"title" db:"title"`
-	Description string    `json:"description" db:"description"`
+	ID          uuid.UUID `json:"id" db:"id" fake:"skip"`
+	CreatedAt   time.Time `json:"created_at" db:"created_at" fake:"skip"`
+	UpdatedAt   time.Time `json:"updated_at" db:"updated_at" fake:"skip"`
+	Title       string    `json:"title" db:"title" fake:"hipster_word"`
+	Description string    `json:"description" db:"description" fake:"hipster_paragraph"`
 }
 
 // String is not required by pop and may be deleted

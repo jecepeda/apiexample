@@ -20,6 +20,15 @@
   version = "v1.5"
 
 [[projects]]
+  name = "github.com/brianvoe/gofakeit"
+  packages = [
+    ".",
+    "data"
+  ]
+  revision = "5e6d50fd5da749baeac175d33eb4bb1fbc5bb050"
+  version = "v3.11.0"
+
+[[projects]]
   branch = "master"
   name = "github.com/cockroachdb/cockroach-go"
   packages = ["crdb"]
@@ -472,6 +481,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6889628333c74cc553610583e8f36e9aac843a217e82cf4faf07b2acf97e06da"
+  inputs-digest = "5e719c88236f222237f85aa9c8113c8a21ac5565bb03b0d5aed6eae7d93fadf8"
   solver-name = "gps-cdcl"
   solver-version = 1
