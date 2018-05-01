@@ -1,34 +1,30 @@
-# Welcome to Buffalo!
+# Welcome to APIExample!
 
-Thank you for choosing Buffalo for your web development needs.
+This is an example of how to build a simple CRUD App with [Buffalo](https://gobuffalo.io)
 
-## Database Setup
+## The goal
 
-It looks like you chose to set up your application using a postgres database! Fantastic!
+The goal of this project is to try how is to develop web applications with [Golang](https://golang.org/). Also is a simple project to test 
+new frontend frameworks and having a basic API to do basic CRUDs.
 
-The first thing you need to do is open up the "database.yml" file and edit it to use the correct usernames, passwords, hosts, etc... that are appropriate for your environment.
+## Requirements
+- Docker.
+- Docker-Compose.
+- Go (1.10>=).
 
-You will also need to make sure that **you** start/install the database of your choice. Buffalo **won't** install and start postgres for you.
-
-### Create Your Databases
-
-Ok, so you've edited the "database.yml" file and started postgres, now Buffalo can create the databases in that file for you:
-
-	$ buffalo db create -a
 ## Starting the Application
 
-Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
+First, we need to configure the environment variables. To do so, create a new .env file with the following attributes:
+- `POSTGRES_USER`: The postgresql user that you would like to use (e.g. postgres).
+- `POSTGRES_PASSWORD`: The postgresql password that you would like to use (e.g. postgres).
 
-	$ buffalo dev
+Then, the first step is to create the database and run the application:
+- Run `docker-compose run web buffalo db create`: it will build everything and will create the database. You can also use `make create`.
+- Run `docker-compose up` to start the application. You can also use `make up`
 
-If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a "Welcome to Buffalo!" page.
+## Extras
 
-**Congratulations!** You now have your Buffalo application up and running.
+Feel free to fork and add new features to this application. If you want to test the application you can just type:
+- `docker-compose run web buffalo test`
 
-## What Next?
-
-We recommend you heading over to [http://gobuffalo.io](http://gobuffalo.io) and reviewing all of the great documentation there.
-
-Good luck!
-
-[Powered by Buffalo](http://gobuffalo.io)
+If you want to add more resources, actions, endpoints, etc. you can go to the main [Buffalo](https://gobuffalo.io) page and look at the docs
