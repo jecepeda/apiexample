@@ -71,9 +71,7 @@ func App() *buffalo.App {
 		app.ErrorHandlers[422] = errorHandler()
 		app.ErrorHandlers[500] = errorHandler()
 
-		app.GET("/", HomeHandler)
 		app.Resource("/frameworks", FrameworksResource{&buffalo.BaseResource{}})
-		
 	}
 
 	return app

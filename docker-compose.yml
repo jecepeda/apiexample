@@ -3,7 +3,6 @@ services:
   web:
     build:
       context: .
-      target: builder
     env_file:
       - .env
     depends_on:

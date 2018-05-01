@@ -59,12 +59,3 @@
 
 [prune]
   go-tests = true
-  unused-packages = true
-
-[[constraint]]
-  branch = "master"
-  name = "github.com/wawandco/fako"
-
-[[constraint]]
-  name = "github.com/brianvoe/gofakeit"
-  version = "3.11.0"

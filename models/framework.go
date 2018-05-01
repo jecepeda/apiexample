@@ -12,8 +12,8 @@ import (
 
 type Framework struct {
 	ID          uuid.UUID `json:"id" db:"id" fake:"skip"`
-	CreatedAt   time.Time `json:"created_at" db:"created_at" fake:"skip"`
-	UpdatedAt   time.Time `json:"updated_at" db:"updated_at" fake:"skip"`
+	CreatedAt   time.Time `json:"-" db:"created_at" fake:"skip"`
+	UpdatedAt   time.Time `json:"-" db:"updated_at" fake:"skip"`
 	Title       string    `json:"title" db:"title" fake:"hipster_word"`
 	Description string    `json:"description" db:"description" fake:"hipster_paragraph"`
 }
@@ -33,8 +33,6 @@ func (f Frameworks) String() string {
 	return string(jf)
 }
 
-// Validate gets run every time you call a "pop.Validate*" (pop.ValidateAndSave, pop.ValidateAndCreate, pop.ValidateAndUpdate) method.
-// This method is not required and may be deleted.
 func (f *Framework) Validate(tx *pop.Connection) (*validate.Errors, error) {
 	return validate.Validate(
 		&validators.StringIsPresent{Field: f.Title, Name: "Title"},

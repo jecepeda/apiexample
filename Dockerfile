@@ -1,5 +1,4 @@
-FROM golang:1.10 as builder
-
+FROM golang:1.10
 
 # Install postgresql (for wait-for-it.sh)
 RUN apt-get update
